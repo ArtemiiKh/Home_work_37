@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <label>Введите email:</label> 
+    <input type="text" id="txt"><input type="button" id="btn" value="Проверить">
+    <script>
+        document.getElementById("btn").onclick = btn_click;
+ 
+        function btn_click() {
+            let regexp = /^[\w\d%$:.-]+@\w+\.\w{2,5}$/;
+            let str = document.getElementById("txt").value;
+            console.log(regexp.test(str));
+        }
+    </script>
+</body>
+</html>
